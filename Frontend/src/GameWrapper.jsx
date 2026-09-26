@@ -18,8 +18,8 @@ const GameWrapper = () => {
 
   return (
     <div id="game-container" ref={containerRef} style={{
-        width: '800px',   
-        height: '600px',
+        width: '100%',         // Твои оригинальные размеры игры
+        height: '100%',
         position: 'relative',
         overflow: 'hidden'}}>
     </div>
