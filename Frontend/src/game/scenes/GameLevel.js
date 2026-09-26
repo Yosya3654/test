@@ -6,9 +6,9 @@ export class GameLevel extends Scene {
     }
 
     preload() {
-        this.load.image('player', 'assets/sprites&bg/players/player.png');
-        this.load.image('vagon_map', 'assets/sprites&bg/vagons/standart.png');
-        this.load.image('scenery', 'assets/sprites&bg/bgs/ground.png');
+        this.load.image('player', '/assets/sprites&bg/players/player.png');
+        this.load.image('vagon_map', '/assets/sprites&bg/vagons/standart.png');
+        this.load.image('scenery', '/assets/sprites&bg/bgs/ground.png');
     }
 
     create() {

@@ -1,4 +1,5 @@
 import bgImage from './assets/MENU_BG_3.jpeg';
+import React from 'react';
 import './App.css';
 
 function App() {
