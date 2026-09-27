@@ -54,7 +54,7 @@ export class Debriefing extends Scene {
         // Лояльность
         this.add.text(winX + 40, metricsY, 'ЛОЯЛЬНОСТЬ', {
             fontFamily: 'Montserrat, sans-serif',
-            fontSize: '11px',
+            fontSize: '20px',
             fontWeight: '600',
             color: '#999999',
             letterSpacing: 2
@@ -79,7 +79,7 @@ export class Debriefing extends Scene {
         // Безопасность
         this.add.text(winX + 280, metricsY, 'БЕЗОПАСНОСТЬ', {
             fontFamily: 'Montserrat, sans-serif',
-            fontSize: '11px',
+            fontSize: '20px',
             fontWeight: '600',
             color: '#999999',
             letterSpacing: 2
