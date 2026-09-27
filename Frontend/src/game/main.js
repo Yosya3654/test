@@ -1,35 +1,21 @@
-// src/game/main.js
-import { GameLevel } from './scenes/GameLevel';
+import { Game, AUTO, Scale } from 'phaser';
 import { Boot } from './scenes/Boot';
-import { MainMenu } from './scenes/MainMenu';
 import { Preloader } from './scenes/Preloader';
-import { AUTO, Game, Scale } from 'phaser';
+import { GameLevel } from './scenes/GameLevel';
+import { NPCChat } from './scenes/NPCChat';
+import { Debriefing } from './scenes/Debriefing';
 
-export default function StartGame(containerId) {
-  const config = {
+const config = {
     type: AUTO,
-    parent: containerId, // Используем ID, переданный из React-компонента
-    width: 1280,         // Твои оригинальные размеры игры
+    width: 1280,
     height: 720,
-    backgroundColor: '#028af8',
-    
-    basePath: '/',
-    
-    physics: {
-      default: 'arcade',
-      arcade: {
-        gravity: { y: 0 },
-        debug: false
-      }
-    },
-    
-    scale: {
-      mode: Scale.ENVELOP, 
-      autoCenter: Scale.CENTER_BOTH
-    },
-    
-    scene: [Boot, Preloader, MainMenu, GameLevel]
-  };
+    parent: 'game-container',
+    backgroundColor: '#0a0a0a',
+    audio: { disableWebAudio: true },
+    physics: { default: 'arcade', arcade: { gravity: { y: 0 }, debug: false } },
+    scale: { mode: Scale.FIT, autoCenter: Scale.CENTER_BOTH },
+    scene: [Boot, Preloader, GameLevel, NPCChat, Debriefing]
+};
 
-  return new Game(config);
-}
+const StartGame = (parent) => new Game({ ...config, parent });
+export default StartGame;

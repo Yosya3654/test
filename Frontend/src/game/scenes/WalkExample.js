@@ -9,8 +9,8 @@ export class WalkExample extends Scene {
     preload() {
         // Метод preload выполняется ОДИН РАЗ при старте сцены.
         // Здесь мы только регистрируем пути к файлам. Картинки ещё не появились на экране.
-        this.load.image('player', '/assets/sprites&bg/player_topdown.png');
-        this.load.image('vagon_map', '/assets/sprites&bg/vagon_topdown.png');
+        this.load.image('player', 'assets/sprites&bg/player_topdown.png');
+        this.load.image('vagon_map', 'assets/sprites&bg/vagon_topdown.png');
     }
 
     create() {
